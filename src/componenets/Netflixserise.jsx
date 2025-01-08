@@ -2,10 +2,10 @@ import seriseData from "../api/seriseData.json"
 import { SeriseCard } from "./SeriseCards";
 const Netflixserise = () => {
     return (
-        <ul>
+        <ul className="grid grid-three--cols">
             {
                 seriseData.map((currentEl) => {
-                    return <SeriseCard key={currentEl.id} currentEl={currentEl} />
+                    return <SeriseCard key={currentEl.id} Data={currentEl} />
                 })
             }
 

@@ -1,23 +1,34 @@
-export const SeriseCard=(props)=>{
-    console.log(props);
-    
-    return(
-        <li>
-        <div>
+export const SeriseCard = ({Data}) => {
+    // console.log(props);
+    const {id,img_url,name,rating,description,cast,genre,watch_url}=Data
+
+    const btn_style ={
+        padding:"1.2rem 2.4rem",
+        border:"none",
+        fontSize:"1.6rem",
+        backgroundColor:"var(--bnt-hover-bg-color)",
+        color:"var(--bg-color)"
+    }
+
+    return (
+        <li className="card">
             <div>
-                <img src={props.currentEl.img_url} alt={props.currentEl.name} srcset="" width="40%" height="40%" />
+                <div>
+                    <img src={img_url} alt={name} srcSet="" width="40%" height="40%" />
+                </div >
+                <div className="card-content">
+                    {/* inline css style={{margin:"1.2rem 0"}} */}
+                <h2 style={{margin:"1.2rem 0"}}>Name:{name}</h2>
+                <h3 style={{fontSize:"18px"}}>Rating:{rating}</h3>
+                <p>Summary :{description} </p>
+                <p>Genre:{genre}</p>
+                <p>Cast:{cast}</p>
+
+                <a href={watch_url} target="_blank">
+                    <button style={btn_style}>Whatch Now</button>
+                </a>
+                </div>
             </div>
-            <h2>Name:{props.currentEl.name}</h2>
-            <h3>Rating:{props.currentEl.rating}</h3>
-            <p>Summary :{props.currentEl.description} </p>
-            <p>Genre:{props.currentEl.genre}</p>
-            <p>Cast:{props.currentEl.cast}</p>
-            {/* turniori operatore are used */}
-            {/* <button>{age >=18 ? "Whatch Now":"Not Available"}</button> */}
-            <a href={props.currentEl.watch_url} target="_blank">
-                <button>Whatch Now</button>
-            </a>
-        </div>
-    </li>
+        </li>
     )
 }
