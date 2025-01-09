@@ -1,5 +1,6 @@
 import Netflixserise from "./componenets/Netflixserise"
-import "./componenets/Netflix.css"
+// import "./componenets/Netflix.css"
+import "./componenets/Netflix.module.css"
 
 export const App = () => {
  // return ([<Netflixserise key="1"/>,<Netflixserise key="2"/>]
