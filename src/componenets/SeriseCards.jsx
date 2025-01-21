@@ -43,7 +43,7 @@ export const SeriseCard = ({ Data }) => {
                     <img src={img_url} alt={name} srcSet="" width="40%" height="40%" />
                 </div >
                 {/* <div className={styles["card-content"]}> */}
-                    <div className="flex flex-col gap-6 py-6 px-6">
+                    <div className="flex flex-col gap-6 py-{3.2rem} px-{1.2rem}">
                     {/* inline css style={{margin:"1.2rem 0"}} */}
                     <h2><b>Name:{name}</b></h2>
                     <Rating>Rating:

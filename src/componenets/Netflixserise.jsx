@@ -5,7 +5,7 @@ const Netflixserise = () => {
         <ul className="grid grid-three--cols">
             {
                 seriseData.map((currentEl) => {
-                    return <SeriseCard key={currentEl.id} Data={currentEl} />
+                return <SeriseCard key={currentEl.id} Data={currentEl} />
                 })
             }
 
